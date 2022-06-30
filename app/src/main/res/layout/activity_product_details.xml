@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProductDetailsActivity">
+    <ImageView
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:id="@+id/product_image_details"
+        android:scaleType="centerCrop"/>
+<TextView
+    android:id="@+id/product_name_details"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/product_image_details"
+    android:text="Product Name"
+    android:textSize="18sp"
+    android:textStyle="bold"
+    android:textColor="@color/black"
+    android:gravity="center"
+    android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/product_description_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/product_name_details"
+        android:text="Product Description"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/product_price_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/product_description_details"
+        android:text="Product Price"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:layout_marginTop="10dp"/>
+
+    <RelativeLayout
+        android:id="@+id/elegant_btn"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/product_price_details"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="15dp"
+     android:layout_marginRight="85dp"
+        android:background="@drawable/buttons"
+        android:layout_marginLeft="85dp"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/inc"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:text="+"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/quantity_val"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:layout_toRightOf="@id/inc"
+            android:text="1"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/dec"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+           android:gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/quantity_val"
+            android:layout_marginRight="5dp"
+
+            android:text="-"
+            android:textColor="@color/white"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--        android:id="@+id/add_product_to_cart"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:src="@drawable/nav_cart"-->
+<!--        android:elevation="6dp"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_alignParentRight="true"-->
+<!--        android:layout_margin="15dp"-->
+<!--        android:backgroundTint="@color/white"-->
+<!--        />-->
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+       android:id="@+id/add_product_to_cart_btn"
+        android:drawableRight="@drawable/nav_cart"
+        android:drawableTint="@color/white"
+        android:textSize="18sp"
+        android:text="ADD TO CART"
+        android:textColor="@color/white" />
+
+</RelativeLayout>
