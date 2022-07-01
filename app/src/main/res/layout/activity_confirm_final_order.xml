@@ -10,7 +10,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:text="Please confirm you shipment details"
-    android:textSize="18dp"
+    android:textSize="20dp"
     android:textStyle="bold"
     android:layout_margin="25dp"
     android:textColor="@color/purple_700"
@@ -57,13 +57,38 @@
         android:layout_marginRight="20dp"
         android:hint="your city Name"
         />
+    <TextView
+        android:id="@+id/payment_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/shippment_city"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:text="payment details"
+        android:textSize="18dp"
+        />
+    <Button
+        android:id="@+id/pay_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+      android:layout_below="@+id/payment_detail"
+        android:layout_marginTop="70dp"
+        android:text="Payment"
+        android:textAllCaps="false"
+        android:layout_centerHorizontal="true"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        />
+
     <Button
         android:id="@+id/confirm_final_order_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
         android:layout_alignParentBottom="true"
-        android:text="Confirm"
+        android:text="Confirm Order"
+        android:textAllCaps="false"
+        android:textSize="20dp"
         android:layout_margin="20dp"
         android:textColor="@color/white"
         />

@@ -62,7 +62,7 @@ public class CartActivity extends AppCompatActivity {
            public void onClick(View v) {
                txtTotalAmount.setText("Total Price = Rs."+(String.valueOf(overAllCost)));
                Intent intent =new Intent(CartActivity.this,ConfirmFinalOrderActivity.class);
-               intent.putExtra("TotalCost","Total Amount :Rs."+(String.valueOf(overAllCost)));
+               intent.putExtra("TotalCost",(String.valueOf(overAllCost)));//changes
                startActivity(intent);
                finish();
            }
@@ -166,7 +166,7 @@ public class CartActivity extends AppCompatActivity {
                      recyclerView.setVisibility(View.GONE);
                      txtMsg1.setVisibility(View.VISIBLE);
                      nextProcessBtn.setVisibility(View.GONE);
-                     Toast.makeText(CartActivity.this,"You can purchase more products once you recieved your previos order",Toast.LENGTH_SHORT).show();
+                     Toast.makeText(CartActivity.this,"You can purchase more products once you recieved your previous order",Toast.LENGTH_SHORT).show();
                  }
             }
             }

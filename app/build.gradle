@@ -66,5 +66,6 @@ dependencies {
 
     implementation 'io.github.pilgr:paperdb:2.7.2'
     implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'com.razorpay:checkout:1.6.19'
 }
 apply plugin: 'com.google.gms.google-services'

@@ -20,7 +20,10 @@
         <activity android:name=".SearchProductsActivity" />
         <activity android:name=".AdminUserProductsActivity" />
         <activity android:name=".AdminNewOrdersActivity" />
-        <activity android:name=".ConfirmFinalOrderActivity" />
+        <activity android:name=".ConfirmFinalOrderActivity"
+           android:exported="true">
+
+        </activity>
         <activity
             android:name=".CartActivity"
             android:exported="true" />

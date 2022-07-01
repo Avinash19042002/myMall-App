@@ -66,11 +66,23 @@
             android:textColor="@color/black"
             android:textStyle="bold"
             android:textSize="18dp"/>
+        <TextView
+            android:id="@+id/order_payment_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Date, Time"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/order_date_time"
+            android:gravity="center"
+            android:layout_marginRight="5dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="18dp"/>
         <Button
             android:id="@+id/show_all_products_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/order_date_time"
+            android:layout_below="@+id/order_payment_details"
             android:text="Show Ordered Products"
             android:background="@color/purple_500"
             android:textAllCaps="false"

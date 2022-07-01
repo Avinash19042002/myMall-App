@@ -52,6 +52,7 @@ private DatabaseReference ordersRef;
              holder.userTotalPrice.setText(model.getTotalAmount());
              holder.userShippingAddress.setText("Shipping Address: "+model.getAddress()+","+model.getCity());
              holder.userDateTime.setText("Ordered at: "+model.getDate()+" "+model.getTime());
+             holder.userPaymentDetails.setText("PaymentDetails :"+model.getPaydetails());
              holder.ShowOrdersButton.setOnClickListener(new View.OnClickListener() {
                  @Override
                  public void onClick(View v) {
@@ -101,12 +102,13 @@ private DatabaseReference ordersRef;
         adapter.startListening();
     }
     public static class AdminOrdersViewHolder extends RecyclerView.ViewHolder{
-          public TextView userName,userPhoneNumber,userTotalPrice,userDateTime,userShippingAddress;
+          public TextView userName,userPhoneNumber,userTotalPrice,userDateTime,userShippingAddress,userPaymentDetails;
           public Button ShowOrdersButton;
         public AdminOrdersViewHolder(@NonNull @NotNull View itemView) {
             super(itemView);
             userName = itemView.findViewById(R.id.order_user_name);
             userPhoneNumber = itemView.findViewById(R.id.order_phone_number);
+            userPaymentDetails = itemView.findViewById(R.id.order_payment_details);
             userTotalPrice= itemView.findViewById(R.id.order_total_price);
             userDateTime = itemView.findViewById(R.id.order_date_time);
             userShippingAddress = itemView.findViewById(R.id.order_address_city);

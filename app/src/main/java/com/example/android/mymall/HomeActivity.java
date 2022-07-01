@@ -76,16 +76,17 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
 
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        if(!type.equals("Admin")){
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(!type.equals("Admin")){
+
                 Intent intent = new Intent(HomeActivity.this,CartActivity.class);
 
                 startActivity(intent);}
-            }
-        });
 
+        });
+                               }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(

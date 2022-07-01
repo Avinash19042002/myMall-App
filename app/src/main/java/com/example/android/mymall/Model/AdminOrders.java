@@ -1,12 +1,12 @@
 package com.example.android.mymall.Model;
 
 public class AdminOrders {
-    private String address,city,date,name,phone,state,time,totalAmount;
+    private String address,city,date,name,phone,state,time,totalAmount,paydetails;
 
     public AdminOrders() {
     }
 
-    public AdminOrders(String address, String city, String date, String name, String phone, String state, String time, String totalAmount) {
+    public AdminOrders(String address, String city, String date, String name, String phone, String state, String time, String totalAmount,String paydetails) {
         this.address = address;
         this.city = city;
         this.date = date;
@@ -15,6 +15,7 @@ public class AdminOrders {
         this.state = state;
         this.time = time;
         this.totalAmount = totalAmount;
+        this.paydetails = paydetails;
     }
 
     public String getAddress() {
@@ -65,6 +66,14 @@ public class AdminOrders {
         this.state = state;
     }
 
+    public String getPaydetails() {
+        return paydetails;
+    }
+
+    public void setPaydetails(String paydetails) {
+        this.paydetails = paydetails;
+    }
+
     public String getTime() {
         return time;
     }
@@ -80,4 +89,6 @@ public class AdminOrders {
     public void setTotalAmount(String totalAmount) {
         this.totalAmount = totalAmount;
     }
+
+
 }
