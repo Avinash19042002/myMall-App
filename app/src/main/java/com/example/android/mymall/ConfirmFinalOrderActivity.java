@@ -34,6 +34,7 @@ private EditText nameEditText,phoneEditText,addressEditText,cityEditText;
 private Button confirmOrderBtn,payBtn;
 private String totalAmount="";
 private TextView paymentDetail;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,7 +47,7 @@ private TextView paymentDetail;
         payBtn = (Button)findViewById(R.id.pay_btn);
 
        Toast.makeText(ConfirmFinalOrderActivity.this,"Total cost = "+totalAmount,Toast.LENGTH_SHORT).show();
-
+        payBtn.setText("You have to pay Rs."+totalAmount);
 
         nameEditText = findViewById(R.id.shippment_name);
         phoneEditText=findViewById(R.id.shippment_phone_number);
@@ -59,10 +60,14 @@ private TextView paymentDetail;
                 check();
             }
         });
+        confirmOrderBtn.setVisibility(View.GONE);
+
+        paymentDetail.setVisibility(View.GONE);
+
         payBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                payment();
+                    payment();
             }
         });
 
@@ -92,11 +97,14 @@ private TextView paymentDetail;
     @Override
     public void onPaymentSuccess(String s) {
         payBtn.setVisibility(View.GONE);
+        confirmOrderBtn.setVisibility(View.VISIBLE);
+        paymentDetail.setVisibility(View.VISIBLE);
         paymentDetail.setText("Order Successfully. Transaction No :"+s);
     }
 
     @Override
     public void onPaymentError(int i, String s) {
+        paymentDetail.setVisibility(View.VISIBLE);
         paymentDetail.setText("Something went wrong"+s);
 
     }
